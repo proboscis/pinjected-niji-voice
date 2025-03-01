@@ -1,0 +1,30 @@
+[project]
+name = "pinjected-niji-voice"
+version = "0.1.3"
+description = "Add your description here"
+authors = [
+    { name = "proboscis", email = "nameissoap@gmail.com" }
+]
+dependencies = [
+    "pinjected>=0.2.228",
+    "httpx>=0.28.1",
+    "injected-utils>=0.1.30",
+    "tenacity>=9.0.0",
+    "pydub>=0.25.1",
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pinjected_niji_voice"]
